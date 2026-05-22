@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Fitness Form</h1>
+    <form action="/process.php" method="POST">  </form>
+
+    <br>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+        
+        <br><br>
+        <label for="phone">Phone</label>
+        <input type="text" name="phone" placeholder="Enter your phone number">
+
+        <br><br>
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your    password">
+
+        <br><br>
+
+        <label for="confirm password">Confirm Password</label>
+        <input type="password" id="confirm password" placeholder="Confirm your   password">
+        <br><br>
+
+        <p> choose your gender:</p>
+
+        <label for="Gender">male</label>
+        <input type="radio" id="male" name="gender"value="male">
+
+        <label for="Gender">female</label>
+        <input type="radio" id="female      " name="gender"value="female">
+
+        <label for="Gender">other</label>
+        <input type="radio" id="other" name="gender"value="other">
+
+        <p>Choose your hobby:</p>
+        <label for="playing">Playing</label>
+        <input type="checkbox" id="playing" name="hobbies[]" value="playing">
+
+        
+        <label for="singing">Singing</label>
+        <input type="checkbox" id="singing" name="hobbies[]" value="singing">
+
+       
+        <label for="dancing">Dancing</label>
+        <input type="checkbox" id="dancing" name="hobbies[]" value="dancing">
+
+        <h3>you are on the way to success!</h3>
+
+        <p><strong>Give some message for us</strong></p>
+
+        <textarea name="message" id="message" placeholder="Enter your message"></textarea>
+
+        <br><br>
+        <input type="submit" value="Submit">
+        <br><br>
+
+    </form>
+</body>
+</html>
