@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Positioning in CSS</title>
+    <style> 
+        .container {
+            width: 400px;
+            height: 400px;
+            background-color: lightblue;
+            position: relative; /* Establishes a new positioning context */
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+            position: absolute; /* Position relative to the nearest positioned ancestor */
+            top: 50px; /* 50px from the top of the container */
+            left: 50px; /* 50px from the left of the container */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
