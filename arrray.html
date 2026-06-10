@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays in JavaScript</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center; 
+            font-size: 44px;
+            text-transform: uppercase;
+            color: #ea1e1e;
+        }
+        p {
+            color: #663dc7;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;  
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+
+    <script>
+        // Creating an array
+        let fruits = ["Apple", "Banana", "Cherry"];
+        console.log(fruits); // Output: ["Apple", "Banana", "Cherry"]
+
+        // Accessing array elements
+        console.log(fruits[0]); // Output: "Apple"
+        console.log(fruits[1]); // Output: "Banana"
+        console.log(fruits[2]); // Output: "Cherry"
+
+        // Adding an element to the end of the array
+        fruits.push("Date");
+        console.log(fruits); // Output: ["Apple", "Banana", "Cherry", "Date"]
+
+        // Removing the last element from the array
+        fruits.pop();
+        console.log(fruits); // Output: ["Apple", "Banana", "Cherry"]
+
+        // Finding the length of the array
+        console.log(fruits.length); // Output: 3
+
+        // Iterating over the array
+        fruits.forEach(function(fruit) {
+            console.log(fruit);
+        });
+        // Output:
+        // "Apple"
+        // "Banana"
+        // "Cherry"
+    </script>   
+
+    <script>
+        // Creating a multidimensional array
+        let matrix = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+        console.log(matrix); // Output: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+        // Accessing elements in a multidimensional array
+        console.log(matrix[0][0]); // Output: 1
+        console.log(matrix[1][1]); // Output: 5
+        console.log(matrix[2][2]); // Output: 9
+    </script>       
+
+
+    <script>
+        // Creating an array of objects
+        let people = [
+            { name: "Alice", age: 30 },
+            { name: "Bob", age: 25 },
+            { name: "Charlie", age: 35 }
+        ];
+        console.log(people); // Output: [{ name: "Alice", age: 30 }, { name: "Bob", age: 25 }, { name: "Charlie", age: 35 }]
+
+        // Accessing properties of objects in the array
+        console.log(people[0].name); // Output: "Alice"
+        console.log(people[1].age); // Output: 25
+        console.log(people[2].name); // Output: "Charlie"
+    </script>   
+
+    <script>
+        // Using array methods
+        let numbers = [1, 2, 3, 4, 5];
+
+        // Using map to create a new array with each element squared
+        let squaredNumbers = numbers.map(function(num) {
+            return num * num;
+        });
+        console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
+
+        // Using filter to create a new array with only even numbers
+        let evenNumbers = numbers.filter(function(num) {
+            return num % 2 === 0;
+        });
+        console.log(evenNumbers); // Output: [2, 4]         
+    </script>
+
+    <script>
+        // Using reduce to sum all the numbers in the array
+        let sum = numbers.reduce(function(total, num) {
+            return total + num;
+        }, 0);
+        console.log(sum); // Output: 15
+    </script>   
+
+    <script>
+        console.log("End of array examples.");
+
+        let arr = [1, 2, 3, true, "Hello", null, undefined, { name: "Alice" }, [4, 5, 6]];
+    
+        console.log(arr); // Output: [1, 2, 3, true, "World", null, undefined, { name: "Alice" }, [4, 5, 6]]
+
+    </script>
+</head>
+<body>
+    <h1>Arrays in JavaScript</h1>
+    <p>Open the console to see the output of the array examples.</p>    
+    <p>Arrays are a powerful data structure in JavaScript that can hold multiple values of different types. They provide various methods for manipulation and iteration.    
+        <p>
+            In the examples above, we have seen how to create arrays, access their elements, and use various array methods such as push, pop, map, filter, and reduce. We also explored multidimensional arrays and arrays of objects. Arrays are essential for handling collections of data in JavaScript and are widely used in web development.  
+
+        <p>
+         Arrays can be used to store lists of items, such as names, numbers, or even complex objects. They allow us to perform operations like sorting, searching, and transforming data efficiently.
+    </p>
+    <p> it is a powerful data structure in JavaScript.</p>
+</body>
+</html>

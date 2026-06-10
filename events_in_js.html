@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            background-color: #f0f0f0;
+            text-align: center;
+            border: 2px solid #ccc; 
+           
+            font-family: 'Arial', Courier, monospace;  
+            font-size: 60px;
+            color: #f11c1c;
+        }
+        p {
+            counter-reset: paragraph    ;
+                color: #3803e6;
+                font-family: 'Georgia', serif; 
+                font-style: italic;
+                text-align: justify;
+                border-left: 4px solid #ea0606;
+                padding-left: 10px;     
+            font-size: 22px;
+            line-height: 2;
+        }
+    </style>
+    <script>
+        // Example of an event listener in JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('The DOM is fully loaded and parsed.');
+        });
+
+        // You can also add event listeners to specific elements
+        document.addEventListener('click', function() {
+            console.log('The document was clicked!');
+        }); 
+
+        // You can also add event listeners to specific elements
+        document.addEventListener('mouseover', function() {
+            console.log('The mouse is over the document!');
+        });
+    </script>
+</head>
+<body>
+    <h1>Events in JavaScript</h1>
+    <p>Events in JavaScript are actions or occurrences that happen in the system you are programming, which the system tells you about so your code can respond to them.    </p>
+    <p>This is a simple example of an event listener in JavaScript.</p>
+    <p>Try clicking anywhere on the document or hovering your mouse over it to see the event listeners in action!</p>   
+    <p>Open the console to see the messages when events are triggered.</p>
+    <p>Events are actions or occurrences that happen in the system you are programming, which the system tells you about so your code can respond to them. Examples include user interactions like clicks, mouse movements, and keyboard input.</p> 
+    
+</body>
+</html>

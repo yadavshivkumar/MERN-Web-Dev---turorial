@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating, Appending, and Removing Elements in JavaScript</title>
+    <style>
+            /* Initial styling for demonstration */
+            h1 {
+                background-color: lightblue;
+                font-size: 44px;
+                text-align: center;
+                text-decoration: underline;
+                border: 2px solid black;
+                color: green;
+            }
+        p {
+            background-color: lightyellow;
+            color: darkblue;
+            text-align: left;
+            text-decoration: italic;
+            border: 1px dashed orange;
+            font-family: Arial, sans-serif;
+            width: 80%; 
+            height: auto;
+            font-size: 20px;
+            margin: 15px 0;
+        }   
+    </style>
+    <script>
+        // Creating a new element
+        const newElement = document.createElement('p');
+        newElement.textContent = 'This is a new paragraph created using JavaScript.';
+
+        // Appending the new element to the body
+        document.body.appendChild(newElement);
+
+        // Removing the element after 5 seconds
+        setTimeout(() => {
+            document.body.removeChild(newElement);
+        }, 5000);
+
+        // Note: The above code will create a new paragraph element, append it to the body of the document, and then remove it after 5 seconds. You can modify the text content and timing as needed.   
+        // You can also create and append multiple elements, or remove specific elements based on their ID or class name using similar methods. 
+        // For example, to remove an element with a specific ID:
+        // const elementToRemove = document.getElementById('elementId');
+        // if (elementToRemove) {
+        //     elementToRemove.parentNode.removeChild(elementToRemove);
+        // }    
+    </script>
+
+</head>
+<body>
+    <h1 style="color:rgb(239, 8, 8); font-size: 49px; font-family: Arial, sans-serif;">Creating, Appending, and Removing Elements in JavaScript</h1>
+    <br>
+    <h3>Creating Elements</h3>
+    <p style="color: blue;">In JavaScript, you can create new elements using the <code>document.createElement()</code> method. This method takes the tag name of the element you want to create as an argument.</p>
+    <br>
+    <h3>Appending Elements</h3>
+    <p style="color: blue;">To add the newly created element to the DOM, you can use the <code>appendChild()</code> method. This method appends the specified element as the last child of the parent element.</p>
+    <br>
+    <h3>Removing Elements</h3>
+    <p style="color: blue;">To remove an element from the DOM, you can use the <code>removeChild()</code> method. This method removes a specified child element from the parent element.</p>
+
+</body>
+</html>

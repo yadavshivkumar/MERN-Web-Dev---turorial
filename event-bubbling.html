@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling in JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            border: 4px solid #ea0606;
+            padding: 10px;
+            background-color: #f0f0f0;
+            text-decoration: underline;
+            text-decoration-color: #ff0000; 
+            color: #f71a1a;
+            font-size: 44px;
+            text-align: center;
+        }
+        p {
+            counter-reset: paragraph    ;
+                color: #3803e6;
+                font-family: 'Georgia', serif; 
+                font-style: italic;
+                text-align: justify;
+                border-left: 4px solid #ea0606;
+                padding-left: 10px;     
+            font-size: 22px;
+            line-height: 2;
+            
+        }
+    </style>
+    <script>
+        // Example of event bubbling
+        document.addEventListener('DOMContentLoaded', () => {
+            const parent = document.getElementById('parent');
+            const child = document.getElementById('child');
+            parent.addEventListener('click', () => {
+                alert('Parent clicked!');
+            });
+            child.addEventListener('click', (event) => {
+                alert('Child clicked!');
+                // event.stopPropagation(); // Uncomment this line to stop bubbling
+            });
+        });
+
+        // Dynamically create elements for demonstration
+        document.addEventListener('DOMContentLoaded', () => {
+            const parent = document.createElement('div');
+            parent.id = 'parent';
+            parent.style.width = '700px';
+            parent.style.height = '400px';
+            parent.style.backgroundColor = 'lightblue';
+            parent.style.display = 'flex';
+            parent.style.justifyContent = 'center';
+            parent.style.alignItems = 'center';
+            parent.textContent = 'Parent';
+            parent.style.margin = '40px';
+            parent.style.cursor = 'pointer';
+            parent.style.position = 'relative';
+            parent.style.zIndex = '1';
+            parent.style.border = '4px solid black';
+            document.body.appendChild(parent);
+            parent.style.position = 'relative';
+        });
+
+        // Create child element inside the parent
+        document.addEventListener('DOMContentLoaded', () => {
+            const child = document.createElement('div');
+            child.id = 'child';
+            child.style.width = '300px';
+            child.style.height = '200px';
+            child.style.backgroundColor = 'lightcoral';
+            child.style.display = 'flex';
+            child.style.justifyContent = 'center';
+            child.style.alignItems = 'center';
+            child.textContent = 'Child';
+            child.style.cursor = 'pointer';
+            const parent = document.getElementById('parent');
+            parent.appendChild(child);
+        });
+
+
+        // Example of event capturing
+        document.addEventListener('DOMContentLoaded', () => {
+            const parent = document.getElementById('parent');
+            parent.addEventListener('click', () => {
+                alert('Parent clicked during capturing phase!');
+            }, true); // Use capturing phase
+        }); 
+
+        // Example of stopping event propagation
+        document.addEventListener('DOMContentLoaded', () => {
+            const child = document.getElementById('child'); 
+            child.addEventListener('click', (event) => {
+                alert('Child clicked and stopping propagation!');
+                event.stopPropagation(); // This will prevent the parent click event from firing
+            });
+        });
+
+        // Example of event delegation
+        document.addEventListener('DOMContentLoaded', () => {
+            const parent = document.getElementById('parent');
+            parent.addEventListener('click', (event) => {
+                if (event.target.id === 'child') {
+                    alert('Child clicked through event delegation!');   
+                }
+            });
+        }); 
+
+        // Example of event delegation with dynamically added elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const parent = document.getElementById('parent');
+            parent.addEventListener('click', (event) => {
+                if (event.target.classList.contains('dynamic-child')) {
+                    alert('Dynamically added child clicked through event delegation!');
+                }
+            });
+            }); 
+            // Dynamically add a new child element after 3 seconds
+            setTimeout(() => {
+                const dynamicChild = document.createElement('div');
+                dynamicChild.classList.add('dynamic-child');
+                dynamicChild.style.width = '200px';
+                dynamicChild.style.height = '120px';
+                dynamicChild.style.backgroundColor = 'lightgreen';
+                dynamicChild.style.display = 'flex';
+                dynamicChild.style.justifyContent = 'center';
+                dynamicChild.style.alignItems = 'center';
+                dynamicChild.textContent = 'Dynamic Child';
+                dynamicChild.style.cursor = 'pointer';
+                const parent = document.getElementById('parent');
+                parent.appendChild(dynamicChild);       
+            }, 3000);   
+    </script>
+</head>
+<body>   
+    <h2>Event Bubbling in JavaScript</h2>
+    <p>Click on the child element to see event bubbling in action. You can also click on the parent element to see the parent click event. Try uncommenting the <code>event.stopPropagation()</code> line in the child click event listener to see how it affects event bubbling.</p>   
+    <p>After 3 seconds, a new dynamic child element will be added. Click on it to see event delegation in action.</p>       
+    <p>Note: The alerts will show the order of event handling. The parent click event will fire after the child click event due to event bubbling, unless you stop propagation.</p> 
+    <p>Also, the parent click event will fire during the capturing phase if you set the third argument of addEventListener to true.</p> 
+    <p>Feel free to experiment with the code and see how event bubbling, capturing, and delegation work in JavaScript!</p>      
+
+</body>
+</html>

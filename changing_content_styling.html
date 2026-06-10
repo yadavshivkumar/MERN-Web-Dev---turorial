@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Content and Styling in JavaScript</title>
+
+
+    <style>
+        /* Initial styling for demonstration */
+        #styled {
+            color: black;
+            background-color: lightgray;
+            text-align: center;
+            font-size: 16px;
+        }   
+
+        h1 {
+            background-color: lightblue;
+            font-size: 44px;
+            text-align: center;
+            text-decoration: underline;
+            border: 2px solid black;
+            color: green;
+        }
+
+        h2 {
+            background-color: lightcoral;
+            font-size: 28px;
+            text-align: center;
+            text-decoration: overline;
+            border: 2px dotted red;
+            color: white;
+        }
+
+        p {
+            background-color: #0a4cd9;
+            background-color: #e0e0e0;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace  ;
+            border: 1px solid #ccc;
+            font-size: 18px;
+        }
+    </style>
+    <script>
+        // Changing Content
+        function changeContent() {
+            document.getElementById("content").innerHTML = "Content has been changed!";
+        }
+
+        // Changing Styling
+        function changeStyle() {
+            document.getElementById("styled").style.color = "red";
+            document.getElementById("styled").style.fontSize = "20px";
+        }
+
+        // You can also combine both content and styling changes in one function if needed
+        function changeContentAndStyle() {
+            changeContent();
+            changeStyle();
+        }   
+
+        // Example of changing both content and style together  
+            function changeBoth() {
+                document.getElementById("content").innerHTML = "Content and style have been changed!";
+                document.getElementById("styled").style.color = "blue";
+                document.getElementById("styled").style.fontSize = "18px";
+            } 
+
+    </script>
+    <script>
+        // Separate script block: call changeBoth on load if available
+        console.log("This is a separate script block to demonstrate that you can have multiple script tags in an HTML document.");
+        if (typeof changeBoth === 'function') {
+            // call changeBoth immediately when the page loads
+            changeBoth();
+        } else {
+            console.warn("changeBoth is not defined.");
+        }
+
+    </script>
+
+    <script>
+
+    if (typeof changeBoth === 'function') {
+        // call changeBoth immediately when the page loads
+        changeBoth();
+    } else {
+        console.warn("changeBoth is not defined.");
+    }
+
+    </script>   
+</head>
+<body>
+    <h1>Changing Content and Styling in JavaScript</h1>
+    <h2>Demonstrating how to change content and styling using JavaScript</h2>
+    <p>This page demonstrates how to change the content and styling of HTML elements using JavaScript. You can click the buttons below to see the changes in action.</p>   
+    <p>Note: You can have multiple script tags in an HTML document, and they will be executed in the order they appear. This allows you to organize your JavaScript code in a way that makes sense for your application.</p>
+    <p id="content">Original content</p>
+    <p id="styled">Original styling</p>
+    <p id="both">Original content and styling</p>
+    <p id="both2">Original content and styling</p>
+    <p id="both3">Original content and styling</p>
+    <button onclick="changeContent()">Change Content</button>
+    <button onclick="changeStyle()">Change Style</button>
+    <button onclick="changeBoth()">Change Both</button> 
+    <button onclick="changeContentAndStyle()">Change Content and Style</button>
+    <button onclick="changeBoth()">Change Both (again)</button>
+
+    <div>
+    <script>
+        // This script block demonstrates that you can have multiple script tags in an HTML document.
+        console.log("This is a script block to show that you can have multiple script tags in an HTML document.");
+    </script>
+    <script>    
+        // This script block demonstrates that you can have multiple script tags in an HTML document.
+        console.log("This is another script block to show that you can have multiple script tags in an HTML document.");
+    </script>
+    </div>
+
+    <div>
+        <script>
+            const welcome = document.createElement('p');
+            welcome.textContent = "Welcome to the page!";
+            document.body.appendChild(welcome);
+
+            
+        </script>
+    </div>
+
+</body>
+</html>

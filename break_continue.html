@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>break and continue in JavaScript</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            background-color: #f0f0f0;
+            padding: 10px;
+            font-size: 44px;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            color: #eb0a0a;
+        }
+        p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: justify;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #0ca3df;
+            line-height: 1.5;
+        }
+    </style>
+
+    <script>
+        // break statement
+        for (let i = 0; i < 10; i++) {
+            if (i === 5) {
+                break; // Exit the loop when i is 5
+            }
+            console.log(i);
+        }
+
+        // continue statement
+        for (let j = 0; j < 10; j++) {
+            if (j % 2 === 0) {
+                continue; // Skip the rest of the loop when j is even
+            }
+            console.log(j);
+        }
+    </script>
+
+    <script> 
+        for (let i = 0; i < 5; i++) {
+            if (i === 2) {
+                continue; // Skip the rest of the loop when i is 2
+            }
+            console.log(i);
+        }   
+    </script>
+</head>
+<body>
+    <h1>break and continue in JavaScript</h1>   
+    <p>Open the console to see the output of the break and continue statements.</p>
+    <p>In the first loop, the break statement will exit the loop when i is 5, so it will print numbers from 0 to 4.</p>
+    <p>In the second loop, the continue statement will skip the even numbers, so it will print only the odd numbers from 0 to 9.</p>
+    <p>In the third loop, the continue statement will skip the number 2, so it will print the numbers 0, 1, 3, and 4.</p>
+    <p>Try modifying the conditions in the break and continue statements to see how they affect the output.</p>     
+    <p>Remember that the break statement will exit the entire loop, while the continue statement will only skip the current iteration and continue with the next one.</p>   
+    <p>Feel free to experiment with different loops and conditions to better understand how break and continue work in JavaScript!      
+
+    </p>
+    
+</body>
+</html>

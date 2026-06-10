@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling in JavaScript</title>
+    
+    <style>
+        body {
+            background-color: #fff; 
+            color: #e30e0e;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        pre {
+            background-color: #e7d6d6;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            color: #e4063e;
+            background-color: #f9f2f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+        }
+        h1, h2      {
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+            color: #333;
+            font-size: 30px; 
+            background-color: rgb(255, 255, 255);  
+            text-align: left;
+            text-decoration: none;
+            text-transform: none;
+        }   
+        p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font: optional;
+            color: #333;
+            background-color: rgb(255, 255, 255);
+            line-height: 1.6;
+        }   
+
+    </style>
+</head>
+<body>
+    <h1>Error Handling in JavaScript</h1>
+    <p>In JavaScript, you can handle errors using the <code>try...catch</code> statement. This allows you to catch and handle exceptions that may occur during the execution of your code.</p>
+    <h2>Using try...catch</h2>  
+    <pre><code>try {
+    // Code that may throw an error
+    let result = someFunction();
+    console.log(result);
+} catch (error) {
+    // Code to handle the error
+    console.error('An error occurred:', error);
+}</code></pre>
+    <p>In this example, if <code>someFunction()</code> throws an error, the catch block will execute, allowing you to handle the error gracefully.</p>
+    <h2>Using finally</h2>
+    <p>You can also use the <code>finally</code> block to execute code regardless of whether an error was thrown or not.</p>        
+    <pre><code>try {
+    // Code that may throw an error
+    let result = someFunction();
+    console.log(result);
+} catch (error) {
+    // Code to handle the error
+    console.error('An error occurred:', error);
+} finally {
+    // Code that will always execute
+    console.log('This will always run.');
+}</code></pre>
+    <p>In this example, the code inside the <code>finally</code> block will execute whether an error occurred or not, making it useful for cleanup tasks.</p>       
+    <h2>Throwing Custom Errors</h2>
+    <p>You can also throw your own custom errors using the <code>throw</code> statement.</p>
+    <pre><code>function validateAge(age) {
+    if (age < 18) {
+        throw new Error('Age must be at least 18.');
+    }
+    return true;
+}   
+try {
+    validateAge(16);
+} catch (error) {
+    console.error('Validation error:', error.message);
+}</code></pre>
+    <p>In this example, the <code>validateAge</code> function throws an error if the age is less than 18. The catch block then handles the error and logs the message.</p>  
+
+</body>
+</html>

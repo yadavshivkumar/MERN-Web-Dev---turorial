@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods in JavaScript </title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            font-size: 44px;
+            font-weight: bold;  
+            background-color: #f0f3f5;
+            padding: 10px;
+            text-align: center;
+                text-transform: uppercase;
+            color: #f50896;
+        }
+        ul {
+            list-style-type: square;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            background-color: #dcb0b0;
+            padding: 10px;
+            color: #555;
+            first-letter {
+                font-size: 200%;
+                font-weight: bold;
+                color: #ee0000;
+            }
+        }
+    </style>
+
+    <script>
+        // Example of using the map method to create a new array with squared values
+        const numbers = [1, 2, 3, 4, 5];
+        const squaredNumbers = numbers.map(num => num * num);
+        console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
+
+        // Example of using the filter method to create a new array with even numbers
+        const evenNumbers = numbers.filter(num => num % 2 === 0);
+        console.log(evenNumbers); // Output: [2, 4]
+
+        // Example of using the reduce method to sum all numbers in the array
+        const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        console.log(sum); // Output: 15 
+    </script>
+
+    <script>
+    console.log("Welcome to arrays")
+    arr = [1, 2, 3, 4, 5]
+    console.log(arr)
+
+  arr.pop() // removes the last element from the array
+  console.log(arr) // Output: [1, 2, 3, 4
+
+    arr.push(6) // adds a new element to the end of the array
+    console.log(arr) // Output: [1, 2, 3, 4, 6]
+
+    arr.shift() // removes the first element from the array
+    console.log(arr) // Output: [2, 3, 4, 6
+
+    arr.unshift(0) // adds a new element to the beginning of the array
+    console.log(arr) // Output: [0, 2, 3, 4, 6]
+
+    arr.splice(2, 1) // removes 1 element at index 2
+    console.log(arr) // Output: [0, 2, 4, 6
+
+    arr.splice(2, 0, 3) // adds a new element at index 2 without removing any elements
+    console.log(arr) // Output: [0, 2, 3, 4, 6]
+
+    arr.reverse() // reverses the order of the elements in the array
+    console.log(arr) // Output: [6, 4, 3, 2, 0]
+        
+    arr.sort() // sorts the elements in the array in ascending order
+    console.log(arr) // Output: [0, 2, 3, 4, 6]     
+
+    arr.sort((a, b) => b - a) // sorts the elements in the array in descending order
+    console.log(arr) // Output: [6, 4, 3, 2, 0]
+
+    arr.forEach(num => console.log(num)) // iterates over each element in the array and logs it to the console  
+
+    arr.map(num => num * 2) // creates a new array with each element multiplied by 2
+    console.log(arr) // Output: [6, 4, 3, 2
+
+    arr.filter(num => num % 2 === 0) // creates a new array with only the even numbers
+    console.log(arr) // Output: [6, 4, 2]   
+
+    arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0) // reduces the array to a single value by summing all the elements
+    console.log(arr) // Output: 12  
+
+    arr.includes(3) // checks if the array includes the value 3
+    console.log(arr) // Output: true    
+
+    arr.indexOf(4) // returns the index of the first occurrence of the value 4 in the array
+    console.log(arr) // Output: 1   
+
+    arr.join(", ") // creates a string from the array elements, separated by a comma and a space
+    console.log(arr) // Output: "6, 4, 3, 2, 0"
+
+
+
+    </script>
+
+    <script>
+     
+        arr = [1, 2, 3, 4, 5, 'shiv']
+        console.log(arr) // Output: [1, 2, 3, 4, 5, 'shiv']
+        
+    </script>   
+
+</head>
+<body>
+    <h1>
+Array Methods in JavaScript 
+
+    </h1>
+    <p>
+        In JavaScript, arrays are a powerful data structure that allows you to store and manipulate collections of data. There are many built-in methods available for arrays that can help you perform various operations such as adding, removing, and transforming elements. Here are some commonly used array methods:  
+    </p>
+    <ul>
+        <li><strong>push()</strong>: Adds one or more elements to the end of an array and returns the new length of the array.</li>
+        <li><strong>pop()</strong>: Removes the last element from an array and returns that element.</li>
+        <li ><strong>shift()</strong>: Removes the first element from an array and returns that element.</li>
+        <li><strong>unshift()</strong>: Adds one or more elements to the beginning of an array and returns the new length of the array.</li>
+        <li><strong>splice()</strong>: Changes the contents of an array by removing or replacing existing elements and/or adding new        
+        elements in place.</li>
+        <li><strong>reverse()</strong>: Reverses the order of the elements in an array.</li>
+        <li><strong>sort()</strong>: Sorts the elements of an array in place and returns the sorted array.</li>
+        <li><strong>forEach()</strong>: Executes a provided function once for each array element.</li>
+        <li><strong>map()</strong>: Creates a new array with the results of calling a provided function on every element in the array.</li>
+        <li><strong>filter()</strong>: Creates a new array with all elements that pass the test implemented by the provided function.</li>
+        <li><strong>reduce()</strong>: Executes a reducer function on each element of the array, resulting in a single output value.</li>
+        <li><strong>includes()</strong>: Determines whether an array includes a certain value among its entries, returning true or false as appropriate.</li>
+        <li><strong>indexOf()</strong>: Returns the first index at which a given element can be found in the array, or -1 if it is not present.</li>
+        <li><strong>join()</strong>: Joins all elements of an array into a string and returns this string.</li>
+    </ul>       
+    <p>
+        These methods provide a wide range of functionality for working with arrays in JavaScript, making it easier to manipulate and manage your data effectively. 
+
+    </p>
+</body>
+</html>

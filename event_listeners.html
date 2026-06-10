@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events listeners in JavaScript</title>
+    <style>
+        .box{
+            width: 400px;
+            height: 50px;
+            background-color: rgb(230, 120, 120);
+        }
+        h1{
+            background-attachment: fixed;
+            text-align: center;
+            text-decoration: underline;
+            font-family: Arial, sans-serif;
+            color: rgb(20, 20, 238);
+            font-size: 48px;
+        }
+        p{
+            background-color: lightyellow;
+            text-align: left;
+            text-decoration: italic;
+            border: 1px dashed orange;  
+            background-origin: padding-box;
+            color: rgb(5, 153, 238);
+            font-size: 20px;
+            }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box">Box1</div>
+    <div class="box">Box2</div> 
+    <div class="box">Box3</div>
+    <script>
+        const boxes = document.querySelectorAll('.box');
+        boxes.forEach(box => {
+            box.addEventListener('click', function() {
+                alert('Box clicked!');
+            });     
+        });
+    </script>
+
+    <script>
+        const box1 = document.querySelector('.box:nth-child(2)');
+        box1.addEventListener('click', function() {
+            alert('Box1 clicked!');
+        }); 
+        const box2 = document.querySelector('.box:nth-child(3)');
+        box2.addEventListener('click', function() {
+            alert('Box2 clicked!');
+        });
+        const box3 = document.querySelector('.box:nth-child(4)');
+        box3.addEventListener('click', function() {
+            alert('Box3 clicked!');
+        });
+    </script>
+
+    <h1>Event listeners in JavaScript</h1>
+    <p>Event listeners are functions that are called when a specific event occurs on an element
+        <p>In the above example, we have added a click event listener to each box. When a box is clicked, an alert will be displayed with the message "Box clicked!"</p>
+        <p>We can also add different event listeners to each box. For example, we   can add a click event listener to box1, box2, and box3 that displays a different message when each box is clicked.</p>
+        <p>In the second script, we have added a click event listener to each box that displays a different message when each box is clicked. When box1 is clicked, an alert will be displayed with the message "Box1 clicked!", when box2 is clicked, an alert will be
+displayed with the message "Box2 clicked!", and when box3 is clicked, an alert will be displayed with the message "Box3 clicked!"</p>   
+</body>
+</html>

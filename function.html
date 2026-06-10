@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions in JavaScript</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 44px;
+            color: #df0479;
+        }
+        p {
+            font-family: 'Times New Roman', serif;
+            text-align: justify;
+            color: #1d7ff8;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+    <script>
+        console.log("jvascript functions");
+        let a = 10;
+        let b = 20;
+
+        let sum = a + b;
+        let average = sum / 2;
+        let averagePlusOne = average + 1;
+        console.log("Average plus one: " + averagePlusOne);
+
+        let a1 = 5;
+        let b1 = 15;
+        let sum1 = a1 + b1;
+        let average1 = sum1 / 2;
+        let averagePlusOne1 = average1 + 1;
+        console.log("Average plus one (second set): " + averagePlusOne1);
+
+
+    </script>
+
+    <script>
+
+    function aPlusOne(a,b) {
+        let sum = a + b;
+        let average = sum / 2;
+        let averagePlusOne = average + 1;
+        return averagePlusOne;
+    }
+
+    console.log("javaScript Functions")
+    let a2 = 10;
+    let b2 = 20;
+    
+    console.log(aPlusOne(a2,b2))
+    console.log(aPlusOne(5,15))
+    console.log(aPlusOne(7,13))
+    console.log(aPlusOne(3,17))
+    console.log(aPlusOne(8,12))
+    </script>
+    </head>
+    </head>
+</head>
+<body>
+ <h1>Functions in JavaScript</h1>
+ <p>Functions are reusable blocks of code that perform a specific task. They allow you to organize your code and make it more modular. In JavaScript, you can define a function using the
+    <p>function</p> keyword, followed by the function name and parentheses. You can also pass parameters to the function, which are values that the function can use to perform its task. The function can return a value using the <p>return</p> statement.    
+</p>
+<p>in the above example, we have defined a function called `aPlusOne` that takes two parameters, `a` and `b`, calculates their average, adds one to it, and returns the result. We then call this function with different sets of values to see the output.    
+
+</p>
+<p>Functions are an essential part of JavaScript programming and are used to create reusable code, improve readability, and manage complexity in larger applications.   </p>
+    </p>
+</body>
+</html>
