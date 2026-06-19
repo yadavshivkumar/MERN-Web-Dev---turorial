@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables in JavaScript</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            background-color: #f0f0f0;
+            padding: 10px;
+            font-size: 38px;    
+            font-family: 'Arial Black', Gadget, sans-serif; 
+            text-align: center;  
+            text-decoration: underline;
+            text-decoration-color: #ff0000;
+            color: #e80404;
+        }
+        p {
+            counter-reset: paragraph    ;
+                color: #0586f6;
+                font-family: 'Georgia', serif; 
+                font-style: italic;
+                text-align: justify;
+                border-left: 4px solid #ea0606;
+                padding-left: 10px;     
+            font-size: 22px;
+            line-height: 2;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }       
+    </style>
+    <script>
+        console.log("I am a variables.");
+        let a = "Shiv ";
+        let b = 78;
+        const c = 90
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        
+        let is_admin = true 
+        console.log(is_admin);
+
+        console.log(typeof "Hello World");  // string
+        console.log(typeof 42);  // number
+        console.log(typeof true);  // boolean
+        console.log(typeof null);  // object
+        console.log(typeof {});  // object
+        console.log(typeof []);  // object
+        console.log(typeof function() {});
+        
+    </script>
+
+    <script>
+        // Variable declaration and initialization
+        let username = "Shiv";
+        const totalage = 25;
+        var city = "New York";
+
+        console.log("Name: " + username);
+        console.log("Age: " + totalage);
+        console.log("City: " + city);               
+    </script>
+
+
+    <script>
+        // Variable reassignment
+        let name = "Shiv";
+        console.log("Original Name: " + name); // Shiv
+
+        name = "Shiv Ji";
+        console.log("Reassigned Name: " + name); // Shiv Ji
+
+        // Constants cannot be reassigned
+        const age = 25;
+        console.log("Age: " + age); // 25
+
+        // Uncommenting the following line will cause an error because 'age' is a constant
+        // age = 30; // TypeError: Assignment to constant variable.
+    </script>   
+
+
+    <script>
+        // Variable scope
+        function myFunction() {
+            let localVariable = "I am local";
+            console.log(localVariable); // I am local
+        }
+
+        myFunction();
+        // console.log(localVariable); // Uncaught ReferenceError: localVariable is not defined
+    </script>       
+
+
+    <script>
+        // Global variable
+        let globalVariable = "I am global";
+
+        function myFunction() {
+            console.log(globalVariable); // I am global
+        }       
+        myFunction();
+        console.log(globalVariable); // I am global
+    </script>   
+
+    <script>
+        // Variable hoisting
+        console.log(hoistedVariable); // undefined
+        var hoistedVariable = "I am hoisted";
+        console.log(hoistedVariable); // I am hoisted
+
+        // let and const are not hoisted
+        // console.log(notHoistedVariable); // Uncaught ReferenceError: notHoistedVariable is not defined
+        let notHoistedVariable = "I am not hoisted";
+        console.log(notHoistedVariable); // I am not hoisted
+    </script>       
+
+
+    <script>
+        // Bitwise Operators
+        let m = 5; // 0101 in binary
+        let n = 3; // 0011 in binary
+        console.log("Bitwise AND (&): " + (m & n)); // 1        
+    </script>
+
+</head>
+<body>
+   <h1>Variables in JavaScript</h1  >
+    <p>Open the console to see the output of the JavaScript code.</p>
+    <p>In JavaScript, variables are used to store data values. You can declare a variable using the <code>var</code>, <code>let</code>, or <code>const</code> keywords. The <code>let</code> and <code>const</code> keywords were introduced in ES6 and provide block scope, while <code>var</code> has function scope.</p>
+    <p>Variables can hold different types of data, such as strings, numbers, booleans, objects, and more. You can also reassign values to variables declared with <code >let</code>, but variables declared with <code>const</code> cannot be reassigned.</p>
+    <p>Variable scope is an important concept in JavaScript. Variables declared inside a function are local to that function and cannot be accessed outside of it. Global variables, on the other hand      
+can be accessed from anywhere in the code.</p>
+    <p>JavaScript also has a concept called hoisting, where variable declarations are moved to the top of their scope during the compilation phase. However, only <code>var</code> declarations are hoisted, while <code>let</code> and <code>const</
+</body>
+</html>
