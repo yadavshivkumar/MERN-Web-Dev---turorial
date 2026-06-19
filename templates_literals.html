@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center; 
+            text-transform: uppercase;
+            border-radius: 5px;
+            border: 2px solid #ea0606;
+            font-size: 44px;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+            color: #f00a0a;
+        }    
+            p {
+                counter-reset: paragraph    ;
+                color: #3803e6;
+                font-family: 'Georgia', serif; 
+                font-style: italic;
+                text-align: justify;
+                border-left: 4px solid #ea0606;
+                padding-left: 10px;     
+            font-size: 22px;
+            line-height: 0.4;
+        }
+    </style>    
+
+    <script>
+        const name = "John";
+        const age = 30;
+
+        // Using template literals
+        const message = `My name is ${name} and I am ${age} years old.`;
+        console.log(message);
+    </script>   
+
+    <script>
+        const a = 5;
+        const b = 10;
+
+        // Using template literals for multi-line strings
+        const multiLineString = `The sum of ${a} and ${b} is ${a + b}.
+This is a multi-line string.`;
+        console.log(multiLineString);
+    </script>   
+
+    <script>
+        const person = {
+            name: "Alice",
+            age: 25
+        };
+
+        // Using template literals to access object properties
+        const personInfo = `Name: ${person.name}, Age: ${person.age}`;
+        console.log(personInfo);        
+    </script>
+
+    <script>
+        const items = ["apple", "banana", "cherry"];
+
+        // Using template literals to create a list
+        const itemList = `Items:        
+
+${items.map(item => `- ${item}`).join('\n')}`;
+        console.log(itemList);
+    </script>   
+
+    <script>
+        const user = {
+            name: "Bob",
+            hobbies: ["reading", "gaming", "hiking"]
+        };
+
+        // Using template literals to create a formatted string
+        const userInfo = `User: ${user.name}
+Hobbies:    ${user.hobbies.map(hobby => `- ${hobby}`).join('\n')}`;
+        console.log(userInfo);
+    </script>       
+
+    <script>
+        const a1 = 10;
+        const b1 = 20;
+
+        // Using template literals for expressions
+        const result = `The result of ${a1} + ${b1} is ${a1 + b1}.`;
+        console.log(result);
+    </script>       
+
+    <script>
+console.log("Template Literals are a powerful feature in JavaScript that allow for easier string interpolation and multi-line strings. They are defined using backticks (`) instead of single or double quotes. With template literals, you can embed expressions inside the string using the ${} syntax, making it easier to create dynamic strings without the need for concatenation."); 
+let x = "Shiv";
+let y = 25;
+console.log(`My name is ${x} and I am ${y} years old.`);  
+
+    </script>
+</head>
+<body>
+    <h1>JavaScript Template Literals Example</h1>
+    <br><br><p>Open the console to see the output of the template literals examples.</p>
+    <br><br><p>Template literals allow for easier string interpolation and multi-line strings.</p>    
+    <br><br><p>They are defined using backticks (`) and can include expressions inside ${}.</p>    
+    <br><br><p>Template literals can also be used for creating multi-line strings without the need for escape characters.</p>
+    <br><br><p>Using template literals can make your code cleaner and more readable when working with strings.</p>  
+    <br><br><p>Try experimenting with template literals in your own code to see how they can simplify string manipulation!</p>  
+
+</body>
+</html>
