@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            margin-right: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }   
+    
+    h1 {
+        background-color: #ef1010;
+        padding: 10px;  
+        color: #efefef;
+        font-size: 44px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+    }   
+        p {
+            counter-reset: paragraph    ;
+                color: #3803e6;
+                font-family: 'Georgia', serif; 
+                font-style: italic;
+                text-align: justify;
+                border-left: 4px solid #ea0606;
+                padding-left: 10px;     
+            font-size: 18px;
+            line-height: 1.5;
+            }
+</style>   
+</head>
+<body>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+        const startBtn = document.getElementById('start');
+        const stopBtn = document.getElementById('stop');    
+        let timerId;    
+        startBtn.addEventListener('click', () => {
+            timerId = setInterval(() => {
+                console.log('Hello');
+            }, 1000);
+        });    
+        stopBtn.addEventListener('click', () => {
+            clearInterval(timerId);
+        });
+
+        
+    </script>
+
+    <h1>Timer Interval</h1> 
+    <p>Click the "Start" button to start logging "Hello" to the console every second. Click the "Stop" button to stop the logging.</p>      
+<p>
+    <br>
+    explanation: The setInterval function is used to execute a specified function repeatedly at fixed time intervals. In this example, when the "Start" button is clicked, it sets up an interval that logs "Hello" to the console every 1000 milliseconds (1 second).
+     <br><br>The clearInterval function is used to stop the interval when the "Stop" button is clicked, preventing further logging of "Hello".    
+  <br><br>  set Interval is useful for tasks that need to be performed repeatedly, such as updating a clock, fetching data at regular intervals, or creating animations. It continues to execute the specified function until it is stopped using clearInterval.    
+  <br><br>  it is important to store the interval ID returned by setInterval in a variable (in this case, timerId) so that it can be used to clear the interval later.  
+   <br><br> it is also important to note that if the "Start" button is clicked multiple times without clicking "Stop", multiple intervals will be created, which can lead to unexpected behavior. To prevent this, you can disable the "Start" button after it is clicked and enable it again when the "Stop" button is clicked.    
+    <br><br>it is used in various applications, such as creating timers, updating user interfaces, or performing periodic tasks in web development. 
+
+</p>
+</body>
+</html>
